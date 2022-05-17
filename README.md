@@ -19,7 +19,7 @@
     - 調べてみたことをサンプルコードの形で記録しよう
         - 調べてみた印象としては Django にもその機能がある
 - トランザクション https://github.com/nisigakisanpub/process-whole-01/issues/2
-- 楽観ロック
+- 楽観ロック https://github.com/nisigakisanpub/process-whole-01/issues/3
 - 単一テーブル継承(STI)
 - validation 後のエラー表示
     - model.errors はあるのか？
