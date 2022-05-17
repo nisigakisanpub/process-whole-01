@@ -5,7 +5,7 @@
 -  React 導入したら Django フレームワークする旨味が減る＝「正解」の立場から
     -  React にルーティングさせたら Django のルーティング機能が無駄になる
     -  webpacker が難しい
-    -  Stimulus.js がよく見える
+    -  React やめるとしたら Stimulus.js がよく見える
         - Bootstrap との相性が心配
 
 -  React 導入したら Django フレームワークする旨味が減る＝「不正解」の立場から
