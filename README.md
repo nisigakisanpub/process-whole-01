@@ -18,7 +18,7 @@
 - Rails にはあるけど Django には無いものを解決するのが役立つ の立場から
     - 調べてみたことをサンプルコードの形で記録しよう
         - 調べてみた印象としては Django にもその機能がある
-- トランザクション
+- トランザクション https://github.com/nisigakisanpub/process-whole-01/issues/2
 - 楽観ロック
 - 単一テーブル継承(STI)
 - validation 後のエラー表示
