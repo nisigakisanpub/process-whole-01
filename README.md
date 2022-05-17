@@ -2,14 +2,14 @@
 # 大項目）開発プロセスの進め方＋django採用のリスク
 
 ## A. React＋Django の評価
--  React 導入したら Django フレームワークする旨味が減る で正解としよう
+-  React 導入したら Django フレームワークする旨味が減る＝「正解」としよう
     -  バックエンドが Python 環境なのは旨味である
     -  React にルーティングさせたら Django のルーティング機能が無駄になる
     -  webpacker が難しい
     -  Stimulus.js がよく見える
       - Bootstrap との相性が心配
 
--  React 導入したら Django フレームワークする旨味が減る で不正解としよう
+-  React 導入したら Django フレームワークする旨味が減る＝「不正解」としよう
     -  frontend と backend で担当が明確に分けられる
     -  frontend と backend でデプロイが別々の作業できる
     -  SPA のデプロイは簡単
