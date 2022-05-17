@@ -21,9 +21,9 @@
 - トランザクション https://github.com/nisigakisanpub/process-whole-01/issues/2
 - 楽観ロック https://github.com/nisigakisanpub/process-whole-01/issues/3
 - 単一テーブル継承(STI) https://github.com/nisigakisanpub/process-whole-01/issues/4
-- validation 後のエラー表示
+- validation 後のエラー表示 https://github.com/nisigakisanpub/process-whole-01/issues/5
     - model.errors はあるのか？
-- Asset Pipeline 的な Javascript 管理機能
+- Asset Pipeline 的な Javascript 管理機能 https://github.com/nisigakisanpub/process-whole-01/issues/6
 
 
 ## C. 重い処理を非同期で行う
