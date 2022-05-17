@@ -20,7 +20,7 @@
         - 調べてみた印象としては Django にもその機能がある
 - トランザクション https://github.com/nisigakisanpub/process-whole-01/issues/2
 - 楽観ロック https://github.com/nisigakisanpub/process-whole-01/issues/3
-- 単一テーブル継承(STI)
+- 単一テーブル継承(STI) https://github.com/nisigakisanpub/process-whole-01/issues/4
 - validation 後のエラー表示
     - model.errors はあるのか？
 - Asset Pipeline 的な Javascript 管理機能
