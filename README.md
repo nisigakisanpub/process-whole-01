@@ -1,13 +1,17 @@
 
-# 大項目）開発プロセスの進め方＋django採用のリスク
+# 大項目）開発プロセスの進め方＋django 採用のリスク
 
 ## A. React＋Django の評価
 -  React 導入したら Django フレームワークする旨味が減る＝「正解」の立場から
     -  React にルーティングさせたら Django のルーティング機能が無駄になる
     -  React も Django も Validation やることになるが折り合いがわからない
-    -  webpacker が難しい
+    -  React は、webpack が難しい
+    -  React は、create-react-app をブラックボックスで使い続ける勇気がいる
+        - いつの間にか node_modules にいっぱい入ってる 
     -  React やめるとしたら Stimulus.js がよく見える
         - Bootstrap との相性が心配
+    - Django 側にはログがあるけど、React 側で情報取るのは無理だろう。
+        - 「性能向上のためのレポート」にOKしてもらえたとしてもやりたくないだろう。
 
 -  React 導入したら Django フレームワークする旨味が減る＝「不正解」の立場から
     -  frontend と backend で担当が明確に分けられる
@@ -30,6 +34,31 @@
     - React 前提ならこの件はなし
 - Ajax
     - React 前提ならこの件はなし
+- テスト
+    - React 側には Jest＋ Django 側には、django.test.TestCase
+    - これらが全部OKでもリリースできる自信がない
+    - React 側＋Django 側 全ロジックを通るテストは、Cypress でやるのか？
+        - 両側の仕様を知ってないとテストケース書けないだろう
+        - Cypress のコード自体はReact Javascruptだから、この知識も必要
+- Credentials
+    - Rails の config/credentials/ や、rails credentials:edit は、Django では？
+    - Django DRF では settings.py SECRET_KEY が自動生成されて、GitHub に push すると警告される
+
+- ログ
+    - Rails で言うところの log/production.log は、Django では ？
+        - Python logging を settings.py の LOGGING で設定して使う
+
+
+## H. 選択とその根拠
+- React の UI ライブラリ
+    - React-Bootstrap が一番人気ではないらしい
+- デプロイ先のPaas
+    - Heroku が始めやすい
+- ログ運用 or リリース後のモニタリング には、どんなサービスをどんな設定で使うのだろう？
+    - (セキュリティ) Django DRF 側に、来るはずのないリクエストが来たことを検知したい。
+    - (性能) ユーザーに「なんか遅い」って言われたときに調査したい
+        - いわれる前に、ログ Watch サービスにアラート上げてほしい
+    - メトリクスは Heroku 等、各サービスがデフォルトで持ってるだろうし、それは興味ないだろう
 
 
 ## G. React＋Django REST Framework
