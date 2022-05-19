@@ -12,7 +12,8 @@
         - Bootstrap との相性が心配
     - Django 側にはログがあるけど、React 側で情報取るのは無理だろう。
         - 「性能向上のためのレポート」にOKしてもらえたとしてもやりたくないだろう。
-
+    - React が表示している画面と同じレイアウトで Django 側でPDF作るのは無理だろう
+    
 -  React 導入したら Django フレームワークする旨味が減る＝「不正解」の立場から
     -  frontend と backend で担当が明確に分けられる
     -  frontend と backend でデプロイが別々の作業できる
