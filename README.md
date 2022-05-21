@@ -19,7 +19,7 @@
     -  frontend と backend でデプロイが別々の作業できる
     -  SPA のデプロイは簡単
 
-
+　
 ## B. Django vs Rails 
 - Rails にはあるけど Django には無いものを解決するのが役立つ の立場から
     - 調べてみたことをサンプルコードの形で記録しよう
@@ -49,7 +49,7 @@
     - Rails で言うところの log/production.log は、Django では ？
         - Python logging を settings.py の LOGGING で設定して使う
 
-
+　
 ## H. 選択とその根拠
 - React の UI ライブラリ
     - React-Bootstrap が一番人気ではないらしい
@@ -61,16 +61,94 @@
         - いわれる前に、ログ Watch サービスにアラート上げてほしい
     - メトリクスは Heroku 等、各サービスがデフォルトで持ってるだろうし、それは興味ないだろう
 
+　
+## J. React の難しさ
+- v18 になった
+```
+React v18.0
+March 29, 2022 by The React Team
+https://reactjs.org/blog/2022/03/29/react-v18.html
+```
 
+- こんなエラーが出た
+```
+nisigaki@AMD-win11-64:~/react04/distribution-site$ npm install --save firebase
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE could not resolve
+npm ERR!
+npm ERR! While resolving: @mui/styles@5.8.0
+npm ERR! Found: react@18.1.0
+npm ERR! node_modules/react
+npm ERR!   peer react@">=16.8.0" from @emotion/react@11.9.0
+npm ERR!   node_modules/@emotion/react
+npm ERR!     peer @emotion/react@"^11.0.0-rc.0" from @emotion/styled@11.8.1
+npm ERR!     node_modules/@emotion/styled
+npm ERR!       peerOptional @emotion/styled@"^11.3.0" from @mui/material@5.8.0
+npm ERR!       node_modules/@mui/material
+npm ERR!         peer @mui/material@"^5.0.0" from @mui/icons-material@5.8.0
+npm ERR!         node_modules/@mui/icons-material
+npm ERR!         1 more (the root project)
+npm ERR!       3 more (@mui/styled-engine, @mui/system, the root project)
+npm ERR!     peerOptional @emotion/react@"^11.5.0" from @mui/material@5.8.0
+npm ERR!     node_modules/@mui/material
+npm ERR!       peer @mui/material@"^5.0.0" from @mui/icons-material@5.8.0
+npm ERR!       node_modules/@mui/icons-material
+npm ERR!         @mui/icons-material@"^5.8.0" from the root project
+npm ERR!       1 more (the root project)
+npm ERR!     3 more (@mui/styled-engine, @mui/system, the root project)
+npm ERR!   peer react@">=16.8.0" from @emotion/styled@11.8.1
+npm ERR!   node_modules/@emotion/styled
+npm ERR!     peerOptional @emotion/styled@"^11.3.0" from @mui/material@5.8.0
+npm ERR!     node_modules/@mui/material
+npm ERR!       peer @mui/material@"^5.0.0" from @mui/icons-material@5.8.0
+npm ERR!       node_modules/@mui/icons-material
+npm ERR!         @mui/icons-material@"^5.8.0" from the root project
+npm ERR!       1 more (the root project)
+npm ERR!     peerOptional @emotion/styled@"^11.3.0" from @mui/styled-engine@5.8.0
+npm ERR!     node_modules/@mui/styled-engine
+npm ERR!       @mui/styled-engine@"^5.8.0" from @mui/system@5.8.0
+npm ERR!       node_modules/@mui/system
+npm ERR!         @mui/system@"^5.8.0" from @mui/material@5.8.0
+npm ERR!         node_modules/@mui/material
+npm ERR!     2 more (@mui/system, the root project)
+npm ERR!   14 more (@mui/base, @mui/icons-material, @mui/material, ...)
+npm ERR!
+npm ERR! Could not resolve dependency:
+npm ERR! peer react@"^17.0.0" from @mui/styles@5.8.0
+npm ERR! node_modules/@mui/styles
+npm ERR!   @mui/styles@"^5.8.0" from the root project
+npm ERR!
+npm ERR! Conflicting peer dependency: react@17.0.2
+npm ERR! node_modules/react
+npm ERR!   peer react@"^17.0.0" from @mui/styles@5.8.0
+npm ERR!   node_modules/@mui/styles
+npm ERR!     @mui/styles@"^5.8.0" from the root project
+npm ERR!
+npm ERR! Fix the upstream dependency conflict, or retry
+npm ERR! this command with --force, or --legacy-peer-deps
+npm ERR! to accept an incorrect (and potentially broken) dependency resolution.
+npm ERR!
+npm ERR! See /home/nisigaki/.npm/eresolve-report.txt for a full report.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/nisigaki/.npm/_logs/2022-05-21T11_44_53_746Z-debug-0.log
+nisigaki@AMD-win11-64:~/react04/distribution-site$
+```
+
+- ワークアラウンドはあるので動かすことはできるが、リリースする自信がない。
+
+- リリース用の安定バージョンで開発、リリース後新バージョン対応、この作業のスケジュールが必要だろう
+
+　
 ## G. React＋Django REST Framework
 - この構成なら何が難しそうか、と考えた方が良いのか？
 
-
+　
 ## C. 重い処理を非同期で行う
 - クライアント側（WEB）から機械学習推論を依頼してそのステータスも見たいという要件に備える
     - AWS Lambda だとステータスが見れない
 
-
+　
 ## D. 開発環境の作り方
 - WSL上のUbuntuを現状の正解としよう
    - WSL上のUbuntu上のDockerでやってたけどブラウザからアクセスできないしそもそもナンセンス
@@ -78,16 +156,16 @@
    - WSL上のUbuntuは入れ替えたり複数立てたりできる
 - Python のバージョン管理は Pyenv で正解としよう
 
-
+　
 ## E. GitHub Organization
 -  チーム開発には GitHub Organization で正解としよう
 -  導入手順
 
-
+　
 ## F. GitHub Issue テンプレート
 -  型なしでは進めにくい で正解としよう
 -  導入手順
 
-
+　
 # 中項目）Rails にはあるけど Django には無いもの
 
