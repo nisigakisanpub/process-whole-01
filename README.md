@@ -48,13 +48,23 @@
 - ログ
     - Rails で言うところの log/production.log は、Django では ？
         - Python logging を settings.py の LOGGING で設定して使う
+- ルーティング
+    - Rails の before_action は Django では？
+    - クライアント側で許可しているルーティング以外は "/" にリダイレクトしたい。  
+      他の方法はあるかな？
+
 
 　
 ## H. 選択とその根拠
 - React の UI ライブラリ
     - React-Bootstrap が一番人気ではないらしい
+
+- React の チャート ライブラリ
+    - HIGHCHARTS すごそう
+
 - デプロイ先のPaas
     - Heroku が始めやすい
+
 - ログ運用 or リリース後のモニタリング には、どんなサービスをどんな設定で使うのだろう？
     - (セキュリティ) Django DRF 側に、来るはずのないリクエストが来たことを検知したい。
     - (性能) ユーザーに「なんか遅い」って言われたときに調査したい
@@ -72,7 +82,8 @@ https://reactjs.org/blog/2022/03/29/react-v18.html
 
 - こんなエラーが出た
 ```
-nisigaki@AMD-win11-64:~/react04/distribution-site$ npm install --save firebase
+npm install --save firebase
+====
 npm ERR! code ERESOLVE
 npm ERR! ERESOLVE could not resolve
 npm ERR!
@@ -132,11 +143,9 @@ npm ERR! See /home/nisigaki/.npm/eresolve-report.txt for a full report.
 
 npm ERR! A complete log of this run can be found in:
 npm ERR!     /home/nisigaki/.npm/_logs/2022-05-21T11_44_53_746Z-debug-0.log
-nisigaki@AMD-win11-64:~/react04/distribution-site$
 ```
 
 - ワークアラウンドはあるので動かすことはできるが、リリースする自信がない。
-
 - リリース用の安定バージョンで開発、リリース後新バージョン対応、この作業のスケジュールが必要だろう
 
 　
