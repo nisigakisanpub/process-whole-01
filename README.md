@@ -41,6 +41,9 @@
     - React 側＋Django 側 全ロジックを通るテストは、Cypress でやるのか？
         - 両側の仕様を知ってないとテストケース書けないだろう
         - Cypress のコード自体はReact Javascruptだから、この知識も必要
+        - テストケース実施前にDBレコード用意して実施後に消す、ってどうやるの？  
+          テスト専用バックエンドが必要ということ？
+
 - Credentials
     - Rails の config/credentials/ や、rails credentials:edit は、Django では？
     - Django DRF では settings.py SECRET_KEY が自動生成されて、GitHub に push すると警告される
