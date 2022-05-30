@@ -1,6 +1,10 @@
 
 # 大項目）開発プロセスの進め方＋django 採用のリスク
 
+Gistへのリンク（Django React session CSRF axios）
+https://gist.github.com/nisigakisanpub/33bcd08f5d9b4cef613f916a303eacf8
+
+
 ## A. React＋Django の評価
 -  React 導入したら Django フレームワークする旨味が減る＝「正解」の立場から
     -  React にルーティングさせたら Django のルーティング機能が無駄になる
